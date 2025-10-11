@@ -597,12 +597,139 @@ body {
 
 .map-view {
     flex: 1;
-    background: linear-gradient(135deg, rgba(241, 250, 192, 0.3) 0%, rgba(44, 221, 13, 0.1) 100%);
+    background: 
+        linear-gradient(135deg, rgba(44, 221, 13, 0.05) 0%, rgba(77, 115, 76, 0.03) 100%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 0 0 25px 25px;
 }
+
+/* Background Scattered Bikes */
+.background-bikes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bg-bike {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(44, 221, 13, 0.08);
+    animation: bgFloat 6s ease-in-out infinite;
+}
+
+.bg-bike-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.bg-bike-2 {
+    top: 25%;
+    right: 15%;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+.bg-bike-3 {
+    top: 40%;
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 9s;
+}
+
+.bg-bike-4 {
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+}
+
+.bg-bike-5 {
+    top: 60%;
+    left: 5%;
+    animation-delay: 3s;
+    animation-duration: 8.5s;
+}
+
+.bg-bike-6 {
+    top: 70%;
+    right: 10%;
+    animation-delay: 1.5s;
+    animation-duration: 7.5s;
+}
+
+.bg-bike-7 {
+    top: 10%;
+    left: 50%;
+    animation-delay: 2.5s;
+    animation-duration: 6.5s;
+}
+
+.bg-bike-8 {
+    bottom: 15%;
+    right: 40%;
+    animation-delay: 4s;
+    animation-duration: 9.5s;
+}
+
+@keyframes bgFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.08;
+    }
+    50% { 
+        transform: translateY(-10px) rotate(5deg);
+        opacity: 0.12;
+    }
+}
+
+/* Simple Bike Container */
+.simple-bike-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+
+.moving-bike {
+    position: relative;
+    font-size: 96px;
+    color: var(--bright-green);
+    animation: bikeFloat 2s ease-in-out infinite;
+    filter: drop-shadow(0 8px 16px rgba(44, 221, 13, 0.5));
+    z-index: 10;
+}
+
+
+
+@keyframes bikeFloat {
+    0% { 
+        transform: translateY(0px);
+    }
+    50% { 
+        transform: translateY(-15px);
+    }
+    100% { 
+        transform: translateY(0px);
+    }
+}
+
+
 
 .bike-locations {
     display: flex;
@@ -649,6 +776,49 @@ body {
     color: var(--gray);
     font-size: var(--font-size-sm);
     margin-bottom: var(--spacing-3);
+}
+
+.geofence-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    background: rgba(44, 221, 13, 0.1);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-3);
+    border: 1px solid rgba(44, 221, 13, 0.3);
+}
+
+.geofence-indicator i {
+    color: var(--bright-green);
+    font-size: var(--font-size-sm);
+}
+
+.geofence-indicator span {
+    color: var(--text-dark);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin: var(--spacing-2) 0 var(--spacing-4);
+    padding: var(--spacing-2);
+    background: rgba(44, 221, 13, 0.05);
+    border-radius: var(--radius-md);
+}
+
+.location-info i {
+    color: var(--bright-green);
+    font-size: var(--font-size-sm);
+}
+
+.location-info span {
+    color: var(--text-medium);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
 }
 
 .rent-btn {
@@ -1923,4 +2093,5 @@ html {
         break-inside: avoid;
     }
 }
+
 
