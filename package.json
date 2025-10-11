@@ -1,0 +1,25 @@
+{
+  "name": "sikad-inquiry-website",
+  "version": "1.0.0",
+  "description": "Professional inquiry website for Sikad IoT-based bike rental system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "bike-rental",
+    "iot",
+    "sikad",
+    "static-website",
+    "inquiry"
+  ],
+  "author": "Sikad Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

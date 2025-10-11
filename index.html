@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikad - Smart Bike Rental System</title>
+    <meta name="description" content="Sikad: A Free-Roam IoT-based Bike Rental System with Geofencing and SMS-based Alerts. Experience smart, secure, and eco-friendly transportation in your community.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="sikadlogo.jpg" alt="Sikad Logo" class="logo-image">
+                <span>Sikad</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#how-to-use" class="nav-link">How to Use</a></li>
+                <li><a href="#safety" class="nav-link">Safety</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#rates" class="nav-link">Rates</a></li>
+                <li><a href="#download" class="nav-link download-btn">Download APK</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-bikes">
+                <div class="bike-icon"><i class="fas fa-bicycle"></i></div>
+                <div class="bike-icon"><i class="fas fa-bicycle"></i></div>
+                <div class="bike-icon"><i class="fas fa-bicycle"></i></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    Experience the Future of Transportation
+                </h1>
+                <h2 class="hero-subtitle">
+                    IoT-powered bike rental system featuring geofencing, real-time tracking, and AI security.
+                </h2>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-download"></i>
+                        Download App
+                    </a>
+                    <a href="#about" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <div class="app-header">
+                                    <div class="status-bar">
+                                        <span>9:41</span>
+                                        <div class="signal-icons">
+                                            <i class="fas fa-signal"></i>
+                                            <i class="fas fa-wifi"></i>
+                                            <i class="fas fa-battery-three-quarters"></i>
+                                        </div>
+                                    </div>
+                                    <div class="app-nav">
+                                        <div class="app-logo">
+                                            <img src="sikadlogo.jpg" alt="Sikad Logo" class="app-logo-image">
+                                            <h3>Sikad</h3>
+                                        </div>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="map-view">
+                                    <div class="bike-locations">
+                                        <div class="bike-marker active"></div>
+                                        <div class="bike-marker"></div>
+                                        <div class="bike-marker"></div>
+                                    </div>
+                                </div>
+                                <div class="rental-card">
+                                    <h4>Bike #001 Available</h4>
+                                    <p>2 min walk • ₱25-40/ride</p>
+                                    <button class="rent-btn">Rent Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Sikad</h2>
+                <p>Revolutionizing community transportation with smart technology</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>IoT-Powered</h3>
+                        <p>Sikad integrates advanced IoT sensors including GPS tracking, motion detection, and real-time monitoring for a seamless rental experience.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Geofencing Security</h3>
+                        <p>Advanced geofencing technology ensures bikes stay within designated areas, with automatic alerts and braking systems for unauthorized usage.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Detection</h3>
+                        <p>TinyML-powered SVM model detects theft attempts and crashes in real-time, providing instant alerts to administrators.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Promote sustainable transportation while reducing traffic congestion and carbon emissions in your community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="how-to-use" class="how-to-use">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>How to Use Sikad</h2>
+                <p>Get started with our bike rental system in just a few simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Download & Register</h3>
+                        <p>Download the Sikad app and create your account with your personal information and contact details.</p>
+                    </div>
+                </div>
+                <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h3>Scan QR Code</h3>
+                        <p>Locate an available bike and scan the QR code on the bike to initiate the rental process.</p>
+                    </div>
+                </div>
+                <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Make Payment</h3>
+                        <p>Complete payment through GCash integration for a secure and convenient transaction.</p>
+                    </div>
+                </div>
+                <div class="step-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        <h3>Unlock & Ride</h3>
+                        <p>Scan the generated QR code on the bike's display to unlock and start your ride within the designated area.</p>
+                    </div>
+                </div>
+                <div class="step-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h3>Return & Park</h3>
+                        <p>Return the bike to any designated parking area within the geofenced zone and end your rental session.</p>
+                    </div>
+                </div>
+                <div class="step-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <h3>Rent Again</h3>
+                        <p>Ready for your next adventure? Simply repeat the process to rent another bike anytime you need it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety" class="safety">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Safety Guidelines</h2>
+                <p>Your safety is our priority. Follow these guidelines for a secure and enjoyable ride</p>
+            </div>
+            <div class="safety-content">
+                <div class="safety-grid">
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="safety-icon">
+                            <i class="fas fa-helmet-safety"></i>
+                        </div>
+                        <h3>Wear Safety Gear</h3>
+                        <p>Always wear a helmet and appropriate safety gear when riding. Safety first!</p>
+                    </div>
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="safety-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Stay in Designated Areas</h3>
+                        <p>Keep within the geofenced zones to avoid automatic braking and alerts.</p>
+                    </div>
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="safety-icon">
+                            <i class="fas fa-traffic-light"></i>
+                        </div>
+                        <h3>Follow Traffic Rules</h3>
+                        <p>Obey all traffic signals, signs, and local traffic regulations while riding.</p>
+                    </div>
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="safety-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Monitor Rental Time</h3>
+                        <p>Keep track of your rental duration to avoid overtime charges and ensure bike availability.</p>
+                    </div>
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="safety-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Report Issues</h3>
+                        <p>Report any bike malfunctions, accidents, or safety concerns through the app immediately.</p>
+                    </div>
+                    <div class="safety-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="safety-icon">
+                            <i class="fas fa-weather-sun"></i>
+                        </div>
+                        <h3>Check Weather Conditions</h3>
+                        <p>Be aware of weather conditions and avoid riding in severe weather or poor visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Advanced Features</h2>
+                <p>Powered by cutting-edge IoT and AI technology</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-image">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>Real-Time GPS Tracking</h3>
+                    <p>Advanced GPS modules provide precise location tracking with real-time updates to both users and administrators.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-image">
+                        <i class="fas fa-vector-square"></i>
+                    </div>
+                    <h3>Smart Geofencing</h3>
+                    <p>Intelligent boundary enforcement with automatic alerts and braking systems when bikes leave designated areas.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>TinyML Theft Detection</h3>
+                    <p>Edge-based AI model detects suspicious activities and potential theft attempts using motion sensor data.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-image">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h3>SMS Alerts</h3>
+                    <p>Instant SMS notifications for administrators on geofence violations, theft attempts, and system anomalies.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Two-Step Verification</h3>
+                    <p>Secure payment processing followed by QR code verification ensures only authorized users can access bikes.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Comprehensive admin dashboard for monitoring usage patterns, system performance, and operational insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rates Section -->
+    <section id="rates" class="rates">
+        <div class="container">
+            <div class="section-header">
+                <h2>Rental Rates & Duration</h2>
+                <p>Choose the perfect ride duration for your journey</p>
+            </div>
+            <div class="rates-content">
+                <div class="rates-grid">
+                    <div class="rate-card">
+                        <div class="rate-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Short Ride</h3>
+                        <div class="rate-price">₱25</div>
+                        <div class="rate-duration">30 minutes</div>
+                        <p>Perfect for quick trips around the village</p>
+                        <div class="rate-features">
+                            <span class="feature-tag">Quick Access</span>
+                            <span class="feature-tag">Perfect for Errands</span>
+                        </div>
+                    </div>
+                    <div class="rate-card featured">
+                        <div class="rate-badge">Most Popular</div>
+                        <div class="rate-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <h3>Cruise</h3>
+                        <div class="rate-price">₱35</div>
+                        <div class="rate-duration">45 minutes</div>
+                        <p>Ideal for leisurely rides and exploring</p>
+                        <div class="rate-features">
+                            <span class="feature-tag">Best Value</span>
+                            <span class="feature-tag">Exploration</span>
+                        </div>
+                    </div>
+                    <div class="rate-card">
+                        <div class="rate-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Long Ride</h3>
+                        <div class="rate-price">₱40</div>
+                        <div class="rate-duration">1 hour</div>
+                        <p>Extended time for longer distances</p>
+                        <div class="rate-features">
+                            <span class="feature-tag">Extended Time</span>
+                            <span class="feature-tag">Long Distance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rates-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Rental Information</h4>
+                            <ul>
+                                <li>All rates include GPS tracking and security features</li>
+                                <li>Automatic braking system for safety</li>
+                                <li>Real-time monitoring and support</li>
+                                <li>Geofencing protection within designated areas</li>
+                                <li>Payment via GCash integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Safety & Security</h4>
+                            <ul>
+                                <li>AI-powered theft detection</li>
+                                <li>SMS alerts for unauthorized usage</li>
+                                <li>Two-step verification process</li>
+                                <li>24/7 system monitoring</li>
+                                <li>Emergency contact support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Location</h2>
+                <p>Sikad is currently available at Antel Grand Village — your smart, sustainable community in Cavite.</p>
+            </div>
+            <div class="location-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="location-info">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Antel Grand Village</h3>
+                        <p>Blk 8 Lot 66 Galicia St, General Trias, 4106 Cavite</p>
+                        <div class="location-features">
+                            <div class="location-feature">
+                                <i class="fas fa-home"></i>
+                                <span>Residential Community</span>
+                            </div>
+                            <div class="location-feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Environment</span>
+                            </div>
+                            <div class="location-feature">
+                                <i class="fas fa-leaf"></i>
+                                <span>Eco-Friendly Zone</span>
+                            </div>
+                        </div>
+                        <div class="location-button">
+                            <a href="https://maps.google.com/?q=Antel+Grand+Village+General+Trias+Cavite" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-directions"></i>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map" data-aos="fade-left" data-aos-delay="400">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.123456789!2d120.8812345!3d14.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAntel%20Grand%20Village!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content" data-aos="zoom-in" data-aos-duration="800">
+                <div class="download-text" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Download Sikad App</h2>
+                    <p>Get the Sikad app and start your smart bike rental journey today. Available for Android devices with offline capabilities and real-time tracking.</p>
+                    <div class="download-features">
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Offline functionality</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Real-time tracking</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Secure payments</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>GPS navigation</span>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="sikad-app.apk" class="btn btn-download" download>
+                            <i class="fas fa-download"></i>
+                            <div class="btn-text">
+                                <span class="btn-title">Download APK</span>
+                                <span class="btn-subtitle">Version 1.0 • 25 MB</span>
+                            </div>
+                        </a>
+                        <div class="download-info">
+                            <p><i class="fas fa-info-circle"></i> Direct APK download - no Google Play Store required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-visual">
+                    <div class="phone-download">
+                        <div class="phone-frame">
+                            <div class="download-screen">
+                                <div class="download-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <h3>Sikad</h3>
+                                <p>Smart Bike Rental</p>
+                                <div class="download-progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="download-text">Downloading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="sikadlogo.jpg" alt="Sikad Logo" class="footer-logo-image">
+                    <span>Sikad</span>
+                </div>
+                <p>&copy; 2025 Sikad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
