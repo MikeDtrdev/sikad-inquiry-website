@@ -18,6 +18,10 @@ app.use(express.static('.', {
     if (filePath.endsWith('.js')) {
       res.setHeader('Content-Type', 'application/javascript');
     }
+    if (filePath.endsWith('.apk')) {
+      res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+      res.setHeader('Content-Disposition', 'attachment; filename="sikad-app.apk"');
+    }
   }
 }));
 
@@ -27,7 +31,8 @@ app.get('/debug', (req, res) => {
   const files = fs.readdirSync('.');
   res.json({
     files: files,
-    sikadlogoExists: files.includes('sikadlogo.jpg')
+    sikadlogoExists: files.includes('sikadlogo.jpg'),
+    apkExists: files.includes('app-release.apk')
   });
 });
 
