@@ -1011,25 +1011,31 @@ section {
 
 .step-item {
     display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-6);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: var(--spacing-8);
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
+    background: var(--gradient-card);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-card);
     transition: var(--transition-normal);
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .step-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-2xl);
+    border-color: rgba(44, 221, 13, 0.2);
 }
 
 .step-number {
+    position: absolute;
+    top: -15px;
+    right: -15px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--vibrant-teal), var(--medium-dark));
+    background: var(--gradient-primary);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -1037,26 +1043,23 @@ section {
     justify-content: center;
     font-size: var(--font-size-xl);
     font-weight: 700;
-    flex-shrink: 0;
-}
-
-.step-content {
-    flex: 1;
+    box-shadow: var(--shadow-lg);
+    z-index: 10;
 }
 
 .step-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: var(--gradient-primary);
-    border-radius: var(--radius-2xl);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-4);
+    font-size: var(--font-size-2xl);
+    margin: 0 auto var(--spacing-4);
     box-shadow: var(--shadow-lg);
-    animation: stepIconPulse 3s ease-in-out infinite;
+    animation: iconFloat 4s ease-in-out infinite;
     transition: var(--transition-normal);
 }
 
@@ -1070,15 +1073,15 @@ section {
     50% { transform: scale(1.05); }
 }
 
-.step-content h3 {
+.step-item h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--text-dark);
     margin-bottom: var(--spacing-3);
 }
 
-.step-content p {
-    color: var(--gray);
+.step-item p {
+    color: var(--text-medium);
     line-height: 1.6;
 }
 
@@ -1923,6 +1926,34 @@ section {
     .step-item:nth-child(5) { grid-row: 5; }
     .step-item:nth-child(6) { grid-row: 6; }
     
+    /* Responsive icons for How to Use, Safety, and Info cards */
+    .step-icon {
+        width: 70px;
+        height: 70px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .safety-icon,
+    .info-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: var(--font-size-2xl);
+    }
+    
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: var(--font-size-lg);
+        top: -12px;
+        right: -12px;
+    }
+    
     .footer-links {
         grid-template-columns: 1fr;
         gap: var(--spacing-6);
@@ -1983,6 +2014,52 @@ section {
         flex-direction: column;
         text-align: center;
         padding: var(--spacing-6);
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-lg);
+        top: -10px;
+        right: -10px;
+    }
+    
+    /* Extra small screens - further reduce icon sizes */
+    .step-icon {
+        width: 70px;
+        height: 70px;
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-3);
+    }
+    
+    .step-item h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .step-item p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .safety-icon {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-lg);
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .rates-info {
+        grid-template-columns: 1fr;
     }
     
 }
