@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <i class="fas fa-download"></i>
                         <div class="btn-text">
                             <span class="btn-title">Download APK</span>
-                            <span class="btn-subtitle">Version 1.0 • 25 MB</span>
+                            <span class="btn-subtitle">Version 1.0 • 32.2 MB</span>
                         </div>
                     `;
                 }, 3000);
