@@ -20,7 +20,7 @@ app.use(express.static('.', {
     }
     if (filePath.endsWith('.apk')) {
       res.setHeader('Content-Type', 'application/vnd.android.package-archive');
-      res.setHeader('Content-Disposition', 'attachment; filename="sikad-app.apk"');
+      res.setHeader('Content-Disposition', 'attachment; filename="Sikad.apk"');
     }
   }
 }));
@@ -32,8 +32,23 @@ app.get('/debug', (req, res) => {
   res.json({
     files: files,
     sikadlogoExists: files.includes('sikadlogo.jpg'),
-    apkExists: files.includes('app-release.apk')
+    apkExists: files.includes('Sikad.apk')
   });
+});
+
+// Specific route for APK download to ensure proper mobile download
+app.get('/Sikad.apk', (req, res) => {
+  const fs = require('fs');
+  const apkPath = path.join(__dirname, 'Sikad.apk');
+  
+  if (fs.existsSync(apkPath)) {
+    res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+    res.setHeader('Content-Disposition', 'attachment; filename="Sikad.apk"');
+    res.setHeader('Content-Transfer-Encoding', 'binary');
+    res.sendFile(apkPath);
+  } else {
+    res.status(404).send('APK file not found');
+  }
 });
 
 // Handle client-side routing - serve index.html for all routes
